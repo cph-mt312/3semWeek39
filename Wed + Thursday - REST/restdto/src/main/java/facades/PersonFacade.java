@@ -2,6 +2,7 @@ package facades;
 
 import dto.PersonDTO;
 import dto.PersonsDTO;
+import entities.Address;
 import entities.Person;
 import exceptions.PersonNotFoundException;
 import java.util.Date;
@@ -52,9 +53,11 @@ public class PersonFacade implements IPersonFacade {
     }
 
     @Override
-    public PersonDTO addPerson(String fName, String lName, String phone) {
+    public PersonDTO addPerson(String fName, String lName, String phone, String street, String zip, String city) {
         EntityManager em = getEntityManager();
         Person person = new Person(fName, lName, phone);
+        Address address = new Address(street, zip, city);
+        person.setAddress(address);
         try {
             em.getTransaction().begin();
             em.persist(person);
@@ -89,6 +92,8 @@ public class PersonFacade implements IPersonFacade {
             person.setlName(p.getlName());
             person.setPhone(p.getPhone());
             person.setLastEdited(new Date());
+            Address address = new Address(p.getStreet(), p.getZip(), p.getCity());
+            person.setAddress(address);
             em.getTransaction().commit();
             return new PersonDTO(person);
         } finally {

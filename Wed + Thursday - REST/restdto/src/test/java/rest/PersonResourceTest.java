@@ -127,7 +127,7 @@ public class PersonResourceTest {
     public void testAddPerson() throws Exception {
         given()
                 .contentType("application/json")
-                .body(new PersonDTO("Severus", "Snape", "77883344"))
+                .body(new PersonDTO("Severus", "Snape", "77883344", "Snapes Office", "1111", "Hogwarts Castle"))
                 .when()
                 .post("person")
                 .then()

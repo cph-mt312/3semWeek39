@@ -80,10 +80,7 @@ public class PersonFacadeTest {
 
     @Test
     public void testAddPerson() {
-        String fName = "Albus";
-        String lName = "Dumbledore";
-        String phone = "66446611";
-        facade.addPerson(fName, lName, phone);
+        facade.addPerson("Albus", "Dumbledore", "88447711", "Dumbledores Office", "1111", "Hogwarts Castle");
         assertEquals(3, facade.getPersonCount());
     }
 
