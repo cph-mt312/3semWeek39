@@ -1,12 +1,12 @@
 # Week39
 
 ## Tuesday (+ small part of Wednesday):
-#### The following exercises can be found in Tuesday - JPA demo
+#### The following exercise can be found in Tuesday - JPA demo
 * **jpademo:**
     - I have watched all the video tutorials and coded alongside them (this includes adding/converting to DTO as shown in Wednesday's video)
       - Status of completion - 100%
 ## Wednesday/The rest of the week:
-#### The following exercises can be found in Wed + Thursday - REST
+#### The following exercise can be found in Wed + Thursday - REST
 * **restdto:**
     - *Part 1: Creating a REST API built on JPA Entities, a Facade, DTOs, and Tests*
       - Status of completion - *Nearly* 100% I'm missing a single test in PersonFacadeTest and I only managed to make a couple Rest Assured Tests
