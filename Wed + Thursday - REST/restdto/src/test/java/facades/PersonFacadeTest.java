@@ -68,11 +68,6 @@ public class PersonFacadeTest {
     }
 
     @Test
-    public void testGetAllPersons() {
-        // Not sure how to do this one...
-    }
-
-    @Test
     public void testGetPerson() throws PersonNotFoundException {
         PersonDTO personDTO = facade.getPerson(p1.getId());
         assertEquals(p1.getfName(), personDTO.getfName());

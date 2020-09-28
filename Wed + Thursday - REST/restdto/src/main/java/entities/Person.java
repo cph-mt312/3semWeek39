@@ -27,7 +27,7 @@ public class Person implements Serializable {
     private Date created;
     @Temporal(TemporalType.DATE)
     private Date lastEdited;
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(cascade = CascadeType.PERSIST)
     private Address address;
 
     public Person(String fName, String lName, String phone) {
